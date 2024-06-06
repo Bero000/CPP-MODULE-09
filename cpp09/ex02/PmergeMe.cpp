@@ -22,7 +22,7 @@ PmergeMe& PmergeMe::operator= (const PmergeMe& value)
 void PmergeMe::checkValue(char *val)
 {
     std::string strCtrl = val;
-    size_t position = strCtrl.find_first_not_of("0123456789");
+    size_t position = strCtrl.find_first_not_of("+0123456789");
     if (strCtrl.size() == 0)
         throw ("Error: Can't be empty!");
     if (strCtrl[0] == '-')
